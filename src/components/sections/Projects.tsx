@@ -40,7 +40,7 @@ const projects = [
     tagline: "Turn YouTube Playlists into Structured Courses",
     description:
       "ZverT turns any YouTube playlist into a structured, distraction-free course. Just paste a playlist link and get organized modules, locked lessons, progress tracking, streaks, XP, gems, reminders, MCQ quizzes, analytics, and an AI study assistant. Built for students and skill learners who want a focused learning experience instead of getting lost in YouTube distractions.",
-    liveLink: "https://zvert.lovable.com",
+    liveLink: "https://zvert.lovable.app",
     features: [
       { icon: BookOpen, text: "Structured modules & progress tracking" },
       { icon: Sparkles, text: "AI study assistant + MCQ quizzes" },

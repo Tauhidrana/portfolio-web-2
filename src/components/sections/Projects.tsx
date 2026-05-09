@@ -18,7 +18,7 @@ const projects = [
     tagline: "Smart Money Management for Groups",
     description:
       "Takify is a smart expense and money management web app designed for friends and mess members. It helps users track shared expenses, debts, personal budgets, and settlements in one place. With clean reports, charts, and smart tracking, Takify makes managing money simple, transparent, and hassle-free.",
-    liveLink: "https://takify.example.com",
+    liveLink: "https://takify.lovable.app",
     features: [
       { icon: Users, text: "Shared expense tracking" },
       { icon: DollarSign, text: "Debt & settlement management" },
@@ -40,7 +40,7 @@ const projects = [
     tagline: "Turn YouTube Playlists into Structured Courses",
     description:
       "ZverT turns any YouTube playlist into a structured, distraction-free course. Just paste a playlist link and get organized modules, locked lessons, progress tracking, streaks, XP, gems, reminders, MCQ quizzes, analytics, and an AI study assistant. Built for students and skill learners who want a focused learning experience instead of getting lost in YouTube distractions.",
-    liveLink: "https://zvert.example.com",
+    liveLink: "https://zvert.lovable.com",
     features: [
       { icon: BookOpen, text: "Structured modules & progress tracking" },
       { icon: Sparkles, text: "AI study assistant + MCQ quizzes" },

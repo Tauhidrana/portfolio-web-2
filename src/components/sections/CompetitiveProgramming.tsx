@@ -286,8 +286,8 @@ export default function CompetitiveProgramming() {
           {/* Problems counter */}
           <div className="mt-6 flex items-center justify-center gap-[5rem] p-5 rounded-xl bg-gradient-to-r from-indigo-500/10 to-cyan-500/10 border border-indigo-500/20">
             <div className="text-center">
-              <p className="text-5xl font-black gradient-text">200+</p>
-              <p className="text-gray-400 text-sm mt-1">Problems Solved</p>
+              <p className="text-5xl font-black gradient-text">Regionalist (5th place)</p>
+              <p className="text-gray-400 text-sm mt-1">NHSPC 2026</p>
             </div>
             <div className="h-12 w-px bg-white/10" />
             <div className="text-center">

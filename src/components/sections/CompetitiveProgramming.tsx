@@ -162,7 +162,7 @@ export default function CompetitiveProgramming() {
                 <div>
                   <h3 className="text-white font-bold text-xl">Codeforces</h3>
                   <a
-                    href="https://codeforces.com/profile/tauhidrana00"
+                    href="https://codeforces.com/profile/tauhidrana.exe"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-indigo-400 text-sm hover:text-indigo-300 flex items-center gap-1 transition-colors"
@@ -214,7 +214,7 @@ export default function CompetitiveProgramming() {
                 <div>
                   <h3 className="text-white font-bold text-xl">CodeChef</h3>
                   <a
-                    href="https://www.codechef.com/users/tauhidrana00"
+                    href="https://www.codechef.com/users/tauhid_rana"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-orange-400 text-sm hover:text-orange-300 flex items-center gap-1 transition-colors"

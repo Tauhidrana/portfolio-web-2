@@ -1,40 +1,7 @@
 import { motion, useInView, type Variants } from "framer-motion";
 import { useRef, useState } from "react";
 import { X, ZoomIn } from "lucide-react";
-
-const codechefCert = "/images/code-chef.webp"
-const nccCert = "/images/ncc.png";
-
-const certs = [
-  {
-    id: "codechef-stacks-queues",
-    title: "Stacks and Queues",
-    issuer: "CodeChef",
-    date: "13th January 2026",
-    description:
-      "Completed all practice problems of Stacks and Queues — PRO Certificate of Completion",
-    color: "text-orange-400",
-    bg: "bg-orange-500/10",
-    border: "border-orange-500/20 hover:border-orange-500/50",
-    image: codechefCert,
-    verifyLink: "https://www.codechef.com/certificates/verify",
-    certId: "31d14d2",
-  },
-  {
-    id: "national-career-conference",
-    title: "National Career Conference 2026",
-    issuer: "Youth Skill Development Institute",
-    date: "11th March 2026",
-    description:
-      'Certificate of Participation — Session: "Future of Work in Bangladesh: Skills That Will Dominate 2030"',
-    color: "text-indigo-400",
-    bg: "bg-indigo-500/10",
-    border: "border-indigo-500/20 hover:border-indigo-500/50",
-    image: nccCert,
-    verifyLink: "#",
-    certId: null,
-  },
-];
+import { CERTIFICATES_DATA } from "@/lib/data";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 30 },
@@ -74,7 +41,7 @@ export default function Certifications() {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl">
-          {certs.map((cert, i) => (
+          {CERTIFICATES_DATA.map((cert, i) => (
             <motion.div
               key={cert.id}
               initial="hidden"
@@ -116,7 +83,7 @@ export default function Certifications() {
                     </p>
                   </div>
                   <div
-                    className={`px-3 py-1 rounded-full text-xs font-medium ${cert.bg} ${cert.color} border ${cert.border} whitespace-nowrap flex-shrink-0`}
+                    className={`px-3 py-1 rounded-full text-xs font-medium ${cert.bg} ${cert.color} border ${cert.border} whitespace-nowrap shrink-0`}
                   >
                     {cert.date.split(" ").slice(-1)[0]}
                   </div>

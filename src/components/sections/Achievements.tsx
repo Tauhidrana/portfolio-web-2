@@ -157,7 +157,7 @@ export default function Achievements() {
                 <div className="inline-flex items-center gap-1.5 px-3 py-1 mb-4 rounded-full bg-indigo-500/10 border border-indigo-500/20">
                   <Medal size={13} className="text-indigo-400" />
                   <span className="text-indigo-400 text-sm font-bold">
-                    5th Place (Regionalist)
+                   Regionalist (5th Place)
                   </span>
                 </div>
 

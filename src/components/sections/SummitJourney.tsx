@@ -12,86 +12,7 @@ import {
   Globe,
   Sparkles,
 } from "lucide-react";
-
-const  aiSummit1 = "/images/summit1.jpg";
-const aiSummit2 = "/images/summit2.jpg";
-const aiSummit3 = "/images/summit3.jpg";
-const aiSummit4 = "/images/summit4.jpg";
-const aiSummit5 = "/images/summit5.jpg";
-const aiSummit6 = "/images/summit6.jpg";
-const aiSummit7 = "/images/summit7.jpg";
-const aiSummit8 = "/images/summit8.jpg";
-
-// ─── DATA ────────────────────────────────────────────────────────────────────
-// To add a new event, copy one object from this array and fill in your details.
-// Add new photo imports above and include them in the photos array.
-
-// eslint-disable-next-line react-refresh/only-export-components
-export const events = [
-  {
-    id: 1,
-    title: "AI Summit Rajshahi 2026",
-    shortTitle: "AI Summit",
-    category: "AI Conference",
-    categoryColor: "emerald",
-    date: "May 9, 2026",
-    location: "Rajshahi, Bangladesh",
-    organizer: "Rajshahi Tech Community × Bangladesh Tech Entrepreneur Society",
-    description:
-      "Attended AI Summit Rajshahi 2026 to explore the future of artificial intelligence, connect with developers, learn from industry experts, and experience emerging AI technologies. The summit featured a star-studded panel including Abdur Rakib (COO, Programming Hero), Abrar Sami, and leading AI entrepreneurs from Bangladesh.",
-    highlight:
-      "Met & networked with Abdur Rakib (COO, Programming Hero) and top AI speakers from Bangladesh.",
-    tags: [
-      "Artificial Intelligence",
-      "Networking",
-      "Panel Discussion",
-      "Tech Community",
-    ],
-    photos: [
-      { src: aiSummit1, caption: "At the AI Summit Rajshahi 2026 backdrop" },
-      { src: aiSummit2, caption: "With Abdur Rakib — COO, Programming Hero" },
-      { src: aiSummit3, caption: "At the summit venue entrance" },
-      { src: aiSummit4, caption: "Outside with a speaker, AI Summit banners" },
-      { src: aiSummit5, caption: "Inside the grand summit hall" },
-      { src: aiSummit6, caption: "Panel: 'The Next Era of Growth with AI'" },
-      { src: aiSummit7, caption: "Networking with fellow attendees" },
-      { src: aiSummit8, caption: "Speaker banners at the venue walkway" },
-    ],
-    featured: true,
-  },
-  // Add more events here ↓
-];
-
-// ─── CATEGORY STYLES ──────────────────────────────────────────────────────────
-const categoryStyles: Record<
-  string,
-  { bg: string; border: string; text: string; dot: string }
-> = {
-  emerald: {
-    bg: "bg-emerald-500/10",
-    border: "border-emerald-500/30",
-    text: "text-emerald-400",
-    dot: "bg-emerald-400",
-  },
-  indigo: {
-    bg: "bg-indigo-500/10",
-    border: "border-indigo-500/30",
-    text: "text-indigo-400",
-    dot: "bg-indigo-400",
-  },
-  cyan: {
-    bg: "bg-cyan-500/10",
-    border: "border-cyan-500/30",
-    text: "text-cyan-400",
-    dot: "bg-cyan-400",
-  },
-  violet: {
-    bg: "bg-violet-500/10",
-    border: "border-violet-500/30",
-    text: "text-violet-400",
-    dot: "bg-violet-400",
-  },
-};
+import { SUMMIT_DATA } from "@/lib/data";
 
 // ─── LIGHTBOX ────────────────────────────────────────────────────────────────
 function Lightbox({
@@ -113,7 +34,7 @@ function Lightbox({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-md"
+        className="fixed inset-0 z-100 flex items-center justify-center bg-black/90 backdrop-blur-md"
         onClick={onClose}
       >
         <motion.div
@@ -168,13 +89,15 @@ function EventCard({
   event,
   index,
 }: {
-  event: (typeof events)[0];
+  event: (typeof SUMMIT_DATA.events)[0];
   index: number;
 }) {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
-  const style = categoryStyles[event.categoryColor] ?? categoryStyles.indigo;
+  const style =
+    SUMMIT_DATA.categoryStyles[event.categoryColor] ??
+    SUMMIT_DATA.categoryStyles.indigo;
 
   const openLightbox = (i: number) => setLightboxIndex(i);
   const closeLightbox = () => setLightboxIndex(null);
@@ -195,11 +118,11 @@ function EventCard({
         className="relative"
       >
         {/* Timeline connector */}
-        <div className="hidden md:flex absolute -left-[3.25rem] top-0 flex-col items-center h-full">
+        <div className="hidden md:flex absolute -left-13 top-0 flex-col items-center h-full">
           <div
-            className={`w-4 h-4 rounded-full ${style.dot} shadow-lg ring-4 ring-black mt-1.5 z-10 flex-shrink-0`}
+            className={`w-4 h-4 rounded-full ${style.dot} shadow-lg ring-4 ring-black mt-1.5 z-10 shrink-0`}
           />
-          <div className="flex-1 w-px bg-gradient-to-b from-white/15 to-transparent mt-2" />
+          <div className="flex-1 w-px bg-linear-to-b from-white/15 to-transparent mt-2" />
         </div>
 
         {/* Main card */}
@@ -219,7 +142,7 @@ function EventCard({
                 </h3>
               </div>
               {event.featured && (
-                <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-yellow-500/10 border border-yellow-500/20 text-yellow-400 text-xs font-bold flex-shrink-0">
+                <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-yellow-500/10 border border-yellow-500/20 text-yellow-400 text-xs font-bold shrink-0">
                   <Sparkles size={12} />
                   Featured Memory
                 </div>
@@ -228,15 +151,15 @@ function EventCard({
 
             <div className="flex flex-wrap gap-4 text-sm text-gray-400 mb-4">
               <span className="flex items-center gap-1.5">
-                <Calendar size={14} className="text-indigo-400 flex-shrink-0" />
+                <Calendar size={14} className="text-indigo-400 shrink-0" />
                 {event.date}
               </span>
               <span className="flex items-center gap-1.5">
-                <MapPin size={14} className="text-indigo-400 flex-shrink-0" />
+                <MapPin size={14} className="text-indigo-400 shrink-0" />
                 {event.location}
               </span>
               <span className="flex items-center gap-1.5">
-                <Globe size={14} className="text-indigo-400 flex-shrink-0" />
+                <Globe size={14} className="text-indigo-400 shrink-0" />
                 {event.organizer}
               </span>
             </div>
@@ -249,10 +172,7 @@ function EventCard({
             <div
               className={`mt-4 p-3 rounded-xl ${style.bg} border ${style.border} flex items-start gap-2`}
             >
-              <Sparkles
-                size={14}
-                className={`${style.text} flex-shrink-0 mt-0.5`}
-              />
+              <Sparkles size={14} className={`${style.text} shrink-0 mt-0.5`} />
               <p
                 className={`${style.text} text-sm font-medium leading-relaxed`}
               >
@@ -342,11 +262,15 @@ function EventCard({
 }
 
 // ─── STATS BAR ────────────────────────────────────────────────────────────────
-const totalPhotos = events.reduce((acc, e) => acc + e.photos.length, 0);
-const allCategories = [...new Set(events.map((e) => e.category))].length;
+const totalPhotos = SUMMIT_DATA.events.reduce(
+  (acc, e) => acc + e.photos.length,
+  0,
+);
+const allCategories = [...new Set(SUMMIT_DATA.events.map((e) => e.category))]
+  .length;
 
 const stats = [
-  { icon: Globe, label: "Events Attended", value: events.length },
+  { icon: Globe, label: "Events Attended", value: SUMMIT_DATA.events.length },
   { icon: Camera, label: "Memories Captured", value: totalPhotos },
   { icon: Tag, label: "Event Types", value: allCategories },
   { icon: Users, label: "Connections Made", value: "∞" },
@@ -396,7 +320,7 @@ export default function SummitJourney() {
               key={s.label}
               className="glass rounded-2xl p-4 border border-white/8 flex items-center gap-3"
             >
-              <div className="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center flex-shrink-0">
+              <div className="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center shrink-0">
                 <s.icon size={18} className="text-indigo-400" />
               </div>
               <div>
@@ -409,7 +333,7 @@ export default function SummitJourney() {
 
         {/* Events Timeline */}
         <div className="md:pl-16 space-y-10">
-          {events.map((event, i) => (
+          {SUMMIT_DATA.events.map((event, i) => (
             <EventCard key={event.id} event={event} index={i} />
           ))}
         </div>

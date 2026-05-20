@@ -123,9 +123,8 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.35 }}
           className="text-gray-400 text-base md:text-lg max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          I solve problems, build scalable software, and compete in programming
-          contests. Currently sharpening algorithms and building products that
-          actually matter.
+          NHSPC 2026 Regionalist (5th place)  | 3★ at CodeChef | Competitive Programmer |
+          Campus Hero at Programming Hero | Campus Ambassador at Shohoj coding
         </motion.p>
 
         <motion.div

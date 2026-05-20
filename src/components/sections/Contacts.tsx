@@ -13,7 +13,7 @@ const socials = [
   { icon: SiInstagram, label: "Instagram", href: "https://instagram.com/tauhidrana.exe", color: "hover:border-pink-400/40 hover:bg-pink-400/5 hover:text-pink-400" },
   { icon: SiDiscord, label: "Discord", href: "https://discord.com/shop/kazitauhidrana", color: "hover:border-indigo-400/40 hover:bg-indigo-400/5 hover:text-indigo-400" },
   { icon: SiCodeforces, label: "Codeforces", href: "https://codeforces.com/profile/tauhidrana.exe", color: "hover:border-indigo-300/40 hover:bg-indigo-300/5 hover:text-indigo-300" },
-  { icon: SiCodechef, label: "CodeChef", href: "https://codechef.com/users/tauhidrana", color: "hover:border-orange-400/40 hover:bg-orange-400/5 hover:text-orange-400" },
+  { icon: SiCodechef, label: "CodeChef", href: "https://codechef.com/users/tauhid_rana", color: "hover:border-orange-400/40 hover:bg-orange-400/5 hover:text-orange-400" },
 ];
 
 const fadeUp: Variants = {

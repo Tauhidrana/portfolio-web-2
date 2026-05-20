@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { Medal, Trophy } from "lucide-react";
 
 const olympiadImg = "/images/olympiad.png";
-const nhspcImg = "/images/nhspc.jpg";
+const nhspcImg = "/images/NHSPC.png";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 30 },

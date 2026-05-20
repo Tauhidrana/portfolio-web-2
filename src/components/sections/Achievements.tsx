@@ -1,6 +1,6 @@
 import { motion, useInView, type Variants } from "framer-motion";
 import { useRef } from "react";
-import { Medal, Trophy, Star } from "lucide-react";
+import { Medal, Trophy } from "lucide-react";
 
 const olympiadImg = "/images/olympiad.png";
 const nhspcImg = "/images/nhspc.jpg";

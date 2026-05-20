@@ -94,17 +94,17 @@ export default function CompetitiveProgramming() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
-  const cfRating = 1068;
+  const cfRating = 966;
   const cfMax = 1146;
   const cfRank = "Newbie";
-  const ccRating = 1622;
+  const ccRating = 1609;
   const ccMax = 1622;
   const ccStars = "3★";
 
   const achievements = [
     {
       icon: Target,
-      text: "200+ problems solved across platforms",
+      text: "400+ problems solved across platforms",
       color: "text-green-400",
     },
     { icon: Award, text: "3-Star Coder on CodeChef", color: "text-orange-400" },

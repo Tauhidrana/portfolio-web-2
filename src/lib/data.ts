@@ -205,7 +205,7 @@ export const ABOUT_DATA = {
 
   quote: {
     text: `"The difference between a good programmer and a great one isn't the language they know — it's the problems they've chosen to sit with."`,
-    author: "— Tauhid's working philosophy",
+    author: "— My working philosophy",
   },
 };
 

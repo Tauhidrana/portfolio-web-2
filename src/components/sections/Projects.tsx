@@ -104,7 +104,7 @@ export default function Projects() {
                   </div>
 
                   <a
-                    href={project.link}
+                    href={project.links.live}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:bg-white/10 ${project.theme.iconColor}`}
@@ -151,7 +151,7 @@ export default function Projects() {
                 </div>
 
                 <a
-                  href={project.link}
+                  href={project.links.live}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group/link inline-flex items-center gap-3 rounded-xl border border-cyan-400/20 bg-cyan-400/10 px-6 py-3 text-sm font-semibold text-cyan-300 transition-all duration-300 hover:bg-cyan-400/20 hover:text-white"

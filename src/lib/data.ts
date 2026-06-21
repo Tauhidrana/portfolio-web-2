@@ -1,8 +1,6 @@
 import { SiFacebook, SiInstagram, SiDiscord } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
-from "lucide-react";
-from "lucide-react";
 import { Camera, Globe, Mail, Tag } from "lucide-react";
 import {
   Code2,
@@ -529,6 +527,58 @@ export const PROJECTS_DATA = {
     description:
       "Products I've built from scratch — real problems, real solutions.",
   },
+
+  projects: [
+    {
+      id: "takify",
+
+      title: "Takify",
+
+      emoji: "💸",
+
+      tagline: "Smart Money Management for Groups",
+
+      description:
+        "Takify is a smart expense and money management web app designed for friends and mess members. It helps users track shared expenses, debts, personal budgets, and settlements in one place. With clean reports, charts, and smart tracking, Takify makes managing money simple, transparent, and hassle-free.",
+
+      links: {
+        live: "https://takify.lovable.app",
+      },
+
+      features: [
+        {
+          icon: Users,
+          text: "Shared expense tracking",
+        },
+
+        {
+          icon: DollarSign,
+          text: "Debt & settlement management",
+        },
+
+        {
+          icon: Sparkles,
+          text: "Clean financial reports & charts",
+        },
+      ],
+
+      tech: ["React", "Node.js", "PostgreSQL", "Chart.js", "Tailwind CSS"],
+
+      theme: {
+        gradFrom: "from-indigo-600/20",
+        gradTo: "to-purple-600/5",
+
+        border: "hover:border-indigo-500/40",
+
+        badge: "bg-indigo-500/15 text-indigo-300 border-indigo-500/20",
+
+        iconBg: "bg-indigo-500/20",
+
+        iconColor: "text-indigo-400",
+
+        topBar: "from-indigo-500 to-purple-500",
+      },
+    },
 {
   id: "cpcoach",
 
@@ -588,59 +638,7 @@ export const PROJECTS_DATA = {
 
     topBar: "from-violet-500 to-fuchsia-500",
   },
-}
-  projects: [
-    {
-      id: "takify",
-
-      title: "Takify",
-
-      emoji: "💸",
-
-      tagline: "Smart Money Management for Groups",
-
-      description:
-        "Takify is a smart expense and money management web app designed for friends and mess members. It helps users track shared expenses, debts, personal budgets, and settlements in one place. With clean reports, charts, and smart tracking, Takify makes managing money simple, transparent, and hassle-free.",
-
-      links: {
-        live: "https://takify.lovable.app",
-      },
-
-      features: [
-        {
-          icon: Users,
-          text: "Shared expense tracking",
-        },
-
-        {
-          icon: DollarSign,
-          text: "Debt & settlement management",
-        },
-
-        {
-          icon: Sparkles,
-          text: "Clean financial reports & charts",
-        },
-      ],
-
-      tech: ["React", "Node.js", "PostgreSQL", "Chart.js", "Tailwind CSS"],
-
-      theme: {
-        gradFrom: "from-indigo-600/20",
-        gradTo: "to-purple-600/5",
-
-        border: "hover:border-indigo-500/40",
-
-        badge: "bg-indigo-500/15 text-indigo-300 border-indigo-500/20",
-
-        iconBg: "bg-indigo-500/20",
-
-        iconColor: "text-indigo-400",
-
-        topBar: "from-indigo-500 to-purple-500",
-      },
-    },
-
+},
     {
       id: "zvert",
 

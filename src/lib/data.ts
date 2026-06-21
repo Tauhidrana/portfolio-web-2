@@ -527,7 +527,66 @@ export const PROJECTS_DATA = {
     description:
       "Products I've built from scratch — real problems, real solutions.",
   },
+{
+  id: "cpcoach",
 
+  title: "CP Coach",
+
+  emoji: "🤖",
+
+  tagline: "AI-Powered Competitive Programming Mentor",
+
+  description:
+    "CP Coach is an AI-powered Competitive Programming platform that unifies Codeforces, CodeChef, LeetCode, AtCoder and HackerRank into one intelligent dashboard. It analyzes ratings, solved problems, contest history and topic distribution to generate Smart AI Daily Sheets, personalized roadmaps and data-driven insights, helping programmers practice smarter instead of solving random problems.",
+
+  links: {
+    live: "https://cpcoach.xyz",
+  },
+
+  features: [
+    {
+      icon: Target,
+      text: "Smart AI Daily Practice Sheet",
+    },
+
+    {
+      icon: Sparkles,
+      text: "AI Coach & Personalized Roadmap",
+    },
+
+    {
+      icon: TrendingUp,
+      text: "Multi-Platform Analytics & Progress Tracking",
+    },
+  ],
+
+  tech: [
+    "Next.js",
+    "TypeScript",
+    "React",
+    "Tailwind CSS",
+    "Firebase",
+    "Gemini AI",
+    "Node.js",
+    "Chart.js",
+  ],
+
+  theme: {
+    gradFrom: "from-violet-600/20",
+    gradTo: "to-fuchsia-600/5",
+
+    border: "hover:border-violet-500/40",
+
+    badge:
+      "bg-violet-500/15 text-violet-300 border-violet-500/20",
+
+    iconBg: "bg-violet-500/20",
+
+    iconColor: "text-violet-400",
+
+    topBar: "from-violet-500 to-fuchsia-500",
+  },
+}
   projects: [
     {
       id: "takify",

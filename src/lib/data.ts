@@ -2,16 +2,7 @@ import { SiFacebook, SiInstagram, SiDiscord } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 from "lucide-react";
-import {
-  Brain,
-  Target,
-  BarChart3,
-  Bell,
-Bot,
-Star,
-Lightbulb,
-Rocket
-},from "lucide-react";
+from "lucide-react";
 import { Camera, Globe, Mail, Tag } from "lucide-react";
 import {
   Code2,

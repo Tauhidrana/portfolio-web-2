@@ -2,6 +2,23 @@ import { SiFacebook, SiInstagram, SiDiscord } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import {
+  Code2,
+  Terminal,
+  Trophy,
+  Cpu,
+  TrendingUp,
+  Zap,
+  Code,
+  Layers,
+  Award,
+  Flame,
+  Target,
+  DollarSign,
+  BookOpen,
+  Users,
+  Sparkles,
+} from "lucide-react";
+import {
   Brain,
   Target,
   BarChart3,

@@ -434,8 +434,8 @@ export const CP_DATA = {
       },
 
       stats: {
-        current: 946,
-        peak: 1146,
+        current: 1181,
+        peak: 1181,
         rank: "Newbie",
       },
     },
@@ -454,8 +454,8 @@ export const CP_DATA = {
       },
 
       stats: {
-        current: 1668,
-        peak: 1674,
+        current: 1686,
+        peak: 1686,
         stars: "3★",
       },
 

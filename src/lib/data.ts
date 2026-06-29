@@ -44,7 +44,7 @@ export const HERO_DATA = {
   role: "Software Engineer & Competitive Programmer",
 
   description:
-    "NHSPC 2026 Regionalist (5th place) | 3★ at CodeChef | Competitive Programmer | Campus Hero at Programming Hero | Campus Ambassador at Shohoj Coding",
+    "NHSPC 2026 National Round Finalist (Regional 5th Place) | Pupil at  Codeforces  | 3★ at CodeChef | Co-founder & CEO at ZeroD | Campus Hero at Programming Hero | Campus Ambassador at Shohoj Coding",
 
   cta: [
     {
@@ -138,7 +138,7 @@ export const ABOUT_DATA = {
 
     competitiveProgramming: {
       platform: "CF",
-      rating: "1068 rated",
+      rating: "1255 rated",
     },
   },
 

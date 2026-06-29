@@ -71,7 +71,7 @@ export const HERO_DATA = {
     },
     {
       icon: FaLinkedin,
-      href: "https://linkedin.com/in/tauhidrana00",
+      href: "https://linkedin.com/in/kazitauhidrana0",
       label: "LinkedIn",
     },
     {
@@ -81,7 +81,7 @@ export const HERO_DATA = {
     },
     {
       icon: SiInstagram,
-      href: "https://instagram.com/tauhidrana.exe",
+      href: "https://instagram.com/fix_with_tauhid",
       label: "Instagram",
     },
     {

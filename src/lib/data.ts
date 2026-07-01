@@ -469,7 +469,7 @@ export const CP_DATA = {
   achievements: [
     {
       icon: Target,
-      text: "400+ problems solved across platforms",
+      text: "500+ problems solved across platforms",
       color: "text-green-400",
     },
 
@@ -494,7 +494,7 @@ export const CP_DATA = {
 
   highlights: [
     {
-      value: "Regionalist (5th place)",
+      value: "National Round Finalist (Regional 5th Place)",
       label: "NHSPC 2026",
       className: "gradient-text",
     },
@@ -506,7 +506,7 @@ export const CP_DATA = {
     },
 
     {
-      value: "966",
+      value: "1372",
       label: "CF Rating",
       className: "text-indigo-300",
     },

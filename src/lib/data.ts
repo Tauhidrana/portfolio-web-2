@@ -495,7 +495,7 @@ export const CP_DATA = {
   highlights: [
     {
       value: "National Round Finalist (Regional 5th Place)",
-      label: "NHSPC 2026",
+      label: "National High School Programming Contest 2026",
       className: "gradient-text",
     },
 

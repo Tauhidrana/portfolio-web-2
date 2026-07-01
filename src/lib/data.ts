@@ -506,7 +506,7 @@ export const CP_DATA = {
     },
 
     {
-      value: "1372",
+      value: "Pupil",
       label: "CF Rating",
       className: "text-indigo-300",
     },

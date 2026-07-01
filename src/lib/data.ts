@@ -430,7 +430,7 @@ export const CP_DATA = {
       theme: {
         text: "text-indigo-400",
         border: "hover:border-indigo-500/40",
-        bg: "bg-indigo-500/20",
+        bg: "bg-orange-500/20",
       },
 
       stats: {

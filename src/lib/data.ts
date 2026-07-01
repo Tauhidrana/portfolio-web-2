@@ -428,8 +428,8 @@ export const CP_DATA = {
       profile: "https://codeforces.com/profile/tauhidrana.exe",
 
       theme: {
-        text: "text-indigo-400",
-        border: "hover:border-indigo-500/40",
+        text: "text-orange-400",
+        border: "hover:border-orange-500/40",
         bg: "bg-orange-500/20",
       },
 

@@ -481,7 +481,7 @@ export const CP_DATA = {
 
     {
       icon: Flame,
-      text: "Active rated contest participant",
+      text: "Pupil Coder on Codeforces,
       color: "text-red-400",
     },
 

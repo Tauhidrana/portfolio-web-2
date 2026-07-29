@@ -83,8 +83,8 @@ export const RATING_SCALES: RatingScale[] = [
 ];
 
 export const FACTS = [
-  { value: "200+", label: "Problems solved" },
-  { value: "15+", label: "Rated contests" },
+  { value: "600+", label: "Problems solved" },
+  { value: "40+", label: "Rated contests" },
   { value: "5th", label: "NHSPC 2026" },
   { value: "2", label: "Products shipped" },
 ];

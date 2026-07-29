@@ -99,7 +99,7 @@ export const EDUCATION = {
 export const ABOUT_PARAGRAPHS = [
   "It started with a loop that did not behave the way I expected. Chasing that down pulled me into competitive programming, where I have spent real hours on graph theory, dynamic programming, and the edge cases that quietly break otherwise correct solutions.",
   "Contests are the part I care about most. A rated round is an honest measurement — it tells you where your reasoning holds and where it does not, twice a week, whether or not you like the answer. My rating is modest and climbing, and I can tell you exactly which topics are holding it down.",
-  "The building came after. **Takify** started because splitting mess expenses by hand was tedious and error-prone. **ZverT** started because a YouTube playlist is a terrible course structure. Both are live, both were built end to end, and both taught me things a problem set cannot.",
+  "The building came after. **Takify** started because splitting mess expenses by hand was tedious and error-prone. **Zverts** started because a YouTube playlist is a terrible course structure. Both are live, both were built end to end, and both taught me things a problem set cannot.",
 ];
 
 export const STACK = [
@@ -122,8 +122,8 @@ export const PROJECTS = [
     href: "https://takify.lovable.app",
   },
   {
-    id: "zvert",
-    title: "ZverT",
+    id: "zverts",
+    title: "Zverts",
     year: "2026",
     tagline: "YouTube playlists, restructured as courses",
     problem:
@@ -131,7 +131,7 @@ export const PROJECTS = [
     description:
       "Paste a playlist link and get ordered modules, locked lessons, progress tracking, MCQ quizzes, and a study assistant that answers against the transcript.",
     tech: ["Next.js", "TypeScript", "OpenAI API", "Prisma", "Tailwind CSS"],
-    href: "https://zvert.lovable.app",
+    href: "https://zverts.com",
   },
 ];
 
@@ -143,7 +143,7 @@ export const ROLES = [
     period: "2023 — Present",
     location: "Rajshahi",
     description:
-      "Built Takify and ZverT from ideation through deployment — architecture, implementation, and release. Both are live products, built solo.",
+      "Built Takify and Zverts from ideation through deployment — architecture, implementation, and release. Both are live products, built solo.",
     tags: ["Product", "Full stack"],
   },
   {

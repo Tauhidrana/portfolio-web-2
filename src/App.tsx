@@ -1,31 +1,25 @@
 import Nav from "@/components/sections/Nav";
 import Hero from "@/components/sections/Hero";
-import About from "@/components/sections/About";
-import Skills from "@/components/sections/Skills";
-import CompetitiveProgramming from "@/components/sections/CompetitiveProgramming";
-import Projects from "@/components/sections/Projects";
-import Experience from "@/components/sections/Experience";
-import Achievements from "@/components/sections/Achievements";
-import Certifications from "@/components/sections/Certifications";
-import SummitJourney from "@/components/sections/SummitJourney";
-import Contact from "@/components/sections/Contacts";
+import Profile from "@/components/sections/Profile";
+import Work from "@/components/sections/Work";
+import Roles from "@/components/sections/Roles";
+import Record from "@/components/sections/Record";
+import Events from "@/components/sections/Events";
+import Contact from "@/components/sections/Contact";
 
-export default function Portfolio() {
+export default function App() {
   return (
-    <div className="min-h-screen bg-[#070711] text-white overflow-x-hidden">
+    <>
       <Nav />
       <main>
         <Hero />
-        <About />
-        <Skills />
-        <CompetitiveProgramming />
-        <Projects />
-        <Experience />
-        <Achievements />
-        <Certifications />
-        <SummitJourney />
+        <Profile />
+        <Work />
+        <Roles />
+        <Record />
+        <Events />
         <Contact />
       </main>
-    </div>
+    </>
   );
 }

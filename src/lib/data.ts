@@ -47,8 +47,8 @@ export const RATING_SCALES: RatingScale[] = [
     platform: "Codeforces",
     handle: "tauhidrana.exe",
     href: "https://codeforces.com/profile/tauhidrana.exe",
-    current: 966,
-    peak: 1146,
+    current: 1298,
+    peak: 1372,
     rank: "Newbie",
     max: 2400,
     bands: [
@@ -66,8 +66,8 @@ export const RATING_SCALES: RatingScale[] = [
     platform: "CodeChef",
     handle: "tauhid_rana",
     href: "https://www.codechef.com/users/tauhid_rana",
-    current: 1609,
-    peak: 1622,
+    current: 1654,
+    peak: 1686,
     rank: "3 star",
     max: 2500,
     bands: [

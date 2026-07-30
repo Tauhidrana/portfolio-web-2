@@ -1,11 +1,12 @@
 import { useState, useCallback } from "react";
-import { EVENTS } from "@/lib/data";
+import { useContent } from "@/lib/content";
 import SectionHeading from "@/components/SectionHeading";
 import Lightbox from "@/components/Lightbox";
 import { useReveal } from "@/lib/useReveal";
 import type { Photo } from "@/types";
 
 export default function Events() {
+  const { events } = useContent();
   const ref = useReveal<HTMLElement>();
   const [view, setView] = useState<{ photos: Photo[]; index: number } | null>(
     null,
@@ -32,11 +33,11 @@ export default function Events() {
       <SectionHeading
         label="Events"
         title="Rooms worth being in."
-        meta={`${EVENTS.length} attended`}
+        meta={`${events.length} attended`}
       />
 
       <div className="mt-14">
-        {EVENTS.map((event, i) => (
+        {events.map((event, i) => (
           <article
             key={event.id}
             data-reveal

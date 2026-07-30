@@ -27,6 +27,45 @@
 }
 
 @layer base {
+  /**
+   * How far the rating bands he is *not* in are knocked back. A colour dimmed
+   * against near-black still reads; the same dimming against near-white erases
+   * the track, so light mode holds them higher. Declared in this layer so the
+   * light override below can win on specificity.
+   */
+  :root {
+    --band-dim: 0.22;
+  }
+
+  /**
+   * Light mode is the same design with the ground and ink swapped, not a
+   * different one. Every component reads these tokens, so overriding them here
+   * re-themes the site and the dashboard together.
+   *
+   * The rank colours are darkened rather than reused: the dark-mode values are
+   * tuned to sit on #0a0a0b and fall below readable contrast on paper white.
+   */
+  :root[data-theme="light"] {
+    --color-ground: #fbfbf9;
+    --color-panel: #f2f2ee;
+    --color-rule: #e2e2dc;
+    --color-ink: #16161a;
+    --color-ink-2: #55554e;
+    --color-ink-3: #7c7c74;
+
+    --color-accent: #2f62b8;
+
+    --color-rank-newbie: #6b6b6b;
+    --color-rank-pupil: #2f7d3d;
+    --color-rank-specialist: #17807a;
+    --color-rank-expert: #2f62b8;
+    --color-rank-cm: #7e3aa0;
+    --color-rank-master: #a9640f;
+    --color-rank-gm: #b8322f;
+
+    --band-dim: 0.45;
+  }
+
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 5rem;

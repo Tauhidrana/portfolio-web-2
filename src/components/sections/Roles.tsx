@@ -1,8 +1,9 @@
-import { ROLES } from "@/lib/data";
+import { useContent } from "@/lib/content";
 import SectionHeading from "@/components/SectionHeading";
 import { useReveal } from "@/lib/useReveal";
 
 export default function Roles() {
+  const { roles } = useContent();
   const ref = useReveal<HTMLElement>();
 
   return (
@@ -14,11 +15,11 @@ export default function Roles() {
       <SectionHeading
         label="Roles"
         title="Where the work happens."
-        meta={`${ROLES.length} positions`}
+        meta={`${roles.length} positions`}
       />
 
       <div className="mt-14">
-        {ROLES.map((role, i) => (
+        {roles.map((role, i) => (
           <article
             key={role.id}
             data-reveal

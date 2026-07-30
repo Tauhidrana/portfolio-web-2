@@ -7,6 +7,31 @@
 
     <title>Kazi Tauhid Rana — Competitive Programmer</title>
 
+    <!--
+      Runs before first paint so a light-mode visitor never sees a dark flash.
+      Kept inline and dependency-free for exactly that reason.
+    -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme");
+          var theme =
+            stored ||
+            (window.matchMedia("(prefers-color-scheme: light)").matches
+              ? "light"
+              : "dark");
+
+          document.documentElement.dataset.theme = theme;
+
+          document
+            .querySelector('meta[name="theme-color"]')
+            .setAttribute("content", theme === "light" ? "#fbfbf9" : "#0a0a0b");
+        } catch (e) {
+          document.documentElement.dataset.theme = "dark";
+        }
+      })();
+    </script>
+
     <meta
       name="description"
       content="Kazi Tauhid Rana — competitive programmer and software builder in Rajshahi, Bangladesh. 3-star on CodeChef, 5th at NHSPC 2026."

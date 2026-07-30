@@ -1,23 +1,28 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useMemo } from "react";
 import { ArrowUpRight } from "lucide-react";
-import { RECORD } from "@/lib/data";
+import { useContent } from "@/lib/content";
 import SectionHeading from "@/components/SectionHeading";
 import Lightbox from "@/components/Lightbox";
 import { useReveal } from "@/lib/useReveal";
 
-const PHOTOS = RECORD.map((item) => ({
-  src: item.image,
-  caption: `${item.title} — ${item.issuer}`,
-}));
-
 export default function Record() {
+  const { record } = useContent();
   const ref = useReveal<HTMLElement>();
   const [open, setOpen] = useState<number | null>(null);
 
+  const photos = useMemo(
+    () =>
+      record.map((item) => ({
+        src: item.image,
+        caption: `${item.title} — ${item.issuer}`,
+      })),
+    [record],
+  );
+
   const step = useCallback(
     (delta: number) =>
-      setOpen((i) => (i === null ? null : (i + delta + PHOTOS.length) % PHOTOS.length)),
-    [],
+      setOpen((i) => (i === null ? null : (i + delta + photos.length) % photos.length)),
+    [photos.length],
   );
 
   const close = useCallback(() => setOpen(null), []);
@@ -31,11 +36,11 @@ export default function Record() {
       <SectionHeading
         label="Record"
         title="Results and credentials somebody else verified."
-        meta={`${RECORD.length} entries`}
+        meta={`${record.length} entries`}
       />
 
       <div className="mt-14">
-        {RECORD.map((item, i) => (
+        {record.map((item, i) => (
           <article
             key={item.id}
             data-reveal
@@ -98,7 +103,7 @@ export default function Record() {
       </div>
 
       {open !== null && (
-        <Lightbox photos={PHOTOS} index={open} onClose={close} onStep={step} />
+        <Lightbox photos={photos} index={open} onClose={close} onStep={step} />
       )}
     </section>
   );

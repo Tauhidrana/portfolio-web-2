@@ -1,8 +1,10 @@
 import { ArrowUpRight } from "lucide-react";
-import { PROFILE, SOCIALS } from "@/lib/data";
+import { useContent } from "@/lib/content";
+import { iconFor } from "@/lib/icons";
 import { useReveal } from "@/lib/useReveal";
 
 export default function Contact() {
+  const { profile, socials } = useContent();
   const ref = useReveal<HTMLElement>();
 
   return (
@@ -19,10 +21,10 @@ export default function Contact() {
         </h2>
 
         <a
-          href={`mailto:${PROFILE.email}`}
+          href={`mailto:${profile.email}`}
           className="mt-8 inline-flex items-baseline gap-2 border-b border-ink pb-1 font-mono text-base text-ink transition-colors hover:border-accent hover:text-accent md:text-lg"
         >
-          {PROFILE.email}
+          {profile.email}
           <ArrowUpRight size={15} />
         </a>
       </div>
@@ -32,8 +34,8 @@ export default function Contact() {
         data-reveal
         style={{ "--i": 1 } as React.CSSProperties}
       >
-        {SOCIALS.map((social) => {
-          const Icon = social.icon;
+        {socials.map((social) => {
+          const Icon = iconFor(social.iconKey);
 
           return (
             <li key={social.label} className="border-b border-r border-rule">
@@ -61,10 +63,10 @@ export default function Contact() {
 
       <footer className="mt-16 flex flex-col gap-3 border-t border-rule pt-6 sm:flex-row sm:items-center sm:justify-between">
         <p className="font-mono text-xs text-ink-3">
-          {PROFILE.name} · {PROFILE.location}
+          {profile.name} · {profile.location}
         </p>
 
-        <p className="font-mono text-xs text-ink-3">{PROFILE.status}</p>
+        <p className="font-mono text-xs text-ink-3">{profile.status}</p>
       </footer>
     </section>
   );

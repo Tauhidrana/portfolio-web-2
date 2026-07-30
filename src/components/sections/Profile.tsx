@@ -1,4 +1,4 @@
-import { PROFILE, ABOUT_PARAGRAPHS, EDUCATION, STACK } from "@/lib/data";
+import { useContent } from "@/lib/content";
 import SectionHeading from "@/components/SectionHeading";
 import { useReveal } from "@/lib/useReveal";
 
@@ -14,6 +14,7 @@ function Prose({ text }: { text: string }) {
 }
 
 export default function Profile() {
+  const { profile, aboutParagraphs, education, stack } = useContent();
   const ref = useReveal<HTMLElement>();
 
   return (
@@ -25,14 +26,14 @@ export default function Profile() {
       <SectionHeading
         label="Profile"
         title="How I got here, and what I am actually good at."
-        meta={EDUCATION.duration}
+        meta={education.duration}
       />
 
       <div className="mt-14 grid gap-14 lg:grid-cols-12 lg:gap-16">
         <div className="lg:col-span-4" data-reveal style={{ "--i": 1 } as React.CSSProperties}>
           <img
-            src={PROFILE.image}
-            alt={PROFILE.name}
+            src={profile.image}
+            alt={profile.name}
             loading="lazy"
             className="w-full max-w-xs object-cover object-top grayscale transition-[filter] duration-500 hover:grayscale-0"
             style={{ aspectRatio: "3 / 4" }}
@@ -42,21 +43,21 @@ export default function Profile() {
             <div className="flex justify-between gap-4 border-b border-rule py-3">
               <dt className="label">Institute</dt>
               <dd className="text-right font-display text-xs text-ink">
-                {EDUCATION.institution}
+                {education.institution}
               </dd>
             </div>
 
             <div className="flex justify-between gap-4 border-b border-rule py-3">
               <dt className="label">Field</dt>
               <dd className="text-right font-display text-xs text-ink">
-                {EDUCATION.field}
+                {education.field}
               </dd>
             </div>
 
             <div className="flex justify-between gap-4 py-3">
               <dt className="label">Based in</dt>
               <dd className="text-right font-display text-xs text-ink">
-                {EDUCATION.location}
+                {education.location}
               </dd>
             </div>
           </dl>
@@ -64,7 +65,7 @@ export default function Profile() {
 
         <div className="lg:col-span-8">
           <div className="max-w-2xl space-y-6">
-            {ABOUT_PARAGRAPHS.map((text, i) => (
+            {aboutParagraphs.map((text, i) => (
               <div key={i} data-reveal style={{ "--i": i + 2 } as React.CSSProperties}>
                 <Prose text={text} />
               </div>
@@ -77,7 +78,7 @@ export default function Profile() {
             data-reveal
             style={{ "--i": 5 } as React.CSSProperties}
           >
-            {STACK.map((group) => (
+            {stack.map((group) => (
               <div key={group.group}>
                 <p className="label">{group.group}</p>
                 <ul className="mt-3 space-y-1.5">

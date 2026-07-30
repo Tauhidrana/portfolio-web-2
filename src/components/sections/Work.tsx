@@ -1,9 +1,10 @@
 import { ArrowUpRight } from "lucide-react";
-import { PROJECTS } from "@/lib/data";
+import { useContent } from "@/lib/content";
 import SectionHeading from "@/components/SectionHeading";
 import { useReveal } from "@/lib/useReveal";
 
 export default function Work() {
+  const { projects } = useContent();
   const ref = useReveal<HTMLElement>();
 
   return (
@@ -15,11 +16,11 @@ export default function Work() {
       <SectionHeading
         label="Work"
         title="Two products, both live, both built end to end."
-        meta={`${PROJECTS.length} shipped`}
+        meta={`${projects.length} shipped`}
       />
 
       <div className="mt-14">
-        {PROJECTS.map((project, i) => (
+        {projects.map((project, i) => (
           <article
             key={project.id}
             data-reveal

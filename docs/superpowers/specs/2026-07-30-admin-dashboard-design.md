@@ -286,6 +286,37 @@ read function are all correct together. This is the one check the implementation
 - Deleting an event removes its photos (cascade)
 - Hard-refreshing `/admin/projects` on Vercel serves the app, not a 404
 
+## Addendum — theme, dashboard link, resume
+
+Added after the original design was approved.
+
+**Light mode.** Every component already reads the `@theme` tokens, so light mode is
+a `:root[data-theme="light"]` block in `index.css` overriding those variables — it
+re-themes the public site and the dashboard together, with no component changes.
+Rank colours are darkened rather than reused: the dark-mode values are tuned for
+`#0a0a0b` and fall below readable contrast on paper white. An inline script in
+`index.html` sets `data-theme` from `localStorage` (falling back to
+`prefers-color-scheme`) before first paint, so a light-mode visitor never sees a
+dark flash. `useTheme()` owns changes from there and keeps the `theme-color` meta
+tag in sync. The toggle sits in the site nav, the dashboard topbar, and the login
+page.
+
+**Dashboard link.** `useAuth` moved from `src/admin/` to `src/lib/` so the public
+nav can use it without importing admin code. The nav renders a Dashboard link only
+when a session exists — for an anonymous visitor `getSession()` resolves from
+localStorage with no network call.
+
+**Resume.** Placed in the hero action row beside "See the work" and "Get in touch":
+that row is already the page's action strip, and the hero is where someone
+evaluating him lands first. Stored as `profile.resume_url` + `profile.resume_filename`,
+both nullable, with a check constraint keeping them set or cleared together — null
+means the link is hidden entirely rather than rendering a dead link. The file lives
+in a **separate `site-files` bucket**, because the image library lists every object
+in its bucket and would render a PDF as a broken thumbnail in the picker. The admin
+page uploads to a fixed `resume.pdf` key so replacing overwrites instead of leaving
+orphans, appends a `?v=` timestamp to defeat CDN caching, and validates type
+(PDF only) and size (10 MB) before upload.
+
 ## Error handling
 
 - **Site fetch fails** — error state with a retry button, not a blank page or a crash

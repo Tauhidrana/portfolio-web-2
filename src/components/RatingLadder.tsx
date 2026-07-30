@@ -64,8 +64,9 @@ export default function RatingLadder({ scale }: { scale: RatingScale }) {
               style={{
                 width: pct(band.to - band.from, scale.max),
                 background: band.color,
-                // Only the band he is actually in reads at full strength.
-                opacity: band === active ? 1 : 0.22,
+                // Only the band he is actually in reads at full strength. The
+                // dim level is a token because it has to differ per theme.
+                opacity: band === active ? 1 : "var(--band-dim)",
               }}
             />
           ))}

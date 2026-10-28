@@ -41,7 +41,12 @@ export function ContentProvider({ children }: { children: ReactNode }) {
     // link usually recovers within a second, and failing the whole page on the
     // first blip is the worst outcome available.
     for (let attempt = 0; ; attempt++) {
-      const { data, error } = await supabase.rpc("get_site_content");
+      // Without a timeout a request to a paused or unreachable project can hang
+      // forever, leaving the visitor on the skeleton with no way out. An abort
+      // surfaces as a code-less error, so it is retried like any network blip.
+      const { data, error } = await supabase
+        .rpc("get_site_content")
+        .abortSignal(AbortSignal.timeout(10_000));
 
       if (!error) {
         setState({ status: "ready", data: data as SiteContent });
